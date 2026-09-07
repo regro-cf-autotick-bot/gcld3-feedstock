@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gcld3-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/gcld3-{{ version }}.tar.gz
   sha256: 47c8c779bfe7372a38564b0cd357556dc362aec81cb55b0c889059e8b952e959
 
 build:
   script:
     - {{ PYTHON }} -m pip install --use-pep517 . -vv
-  number: 14
+  number: 15
   skip: True  # [win or osx]
 
 requirements:
